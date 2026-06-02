@@ -1,0 +1,9 @@
+node_modules/
+.env
+backend/.env
+frontend/dist/
+backend/temp/
+*.db
+*.sqlite
+coderank.db
+.DS_Store
