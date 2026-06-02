@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY || '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';
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
 let genAI = null;
 let geminiModel = null;
