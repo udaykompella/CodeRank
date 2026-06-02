@@ -481,6 +481,7 @@ export default function App() {
       setAdminStarterJs('');
       setAdminStarterPy('');
     }
+    //
   }, [adminFunctionName, adminParamNames]);
 
   const handlePublishChallenge = async (e) => {
