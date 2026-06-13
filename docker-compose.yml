@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: coderank-api
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./backend/.env
+    volumes:
+      # Persist the SQLite database on the host machine
+      - ./backend/coderank.db:/app/backend/coderank.db
+      # Mount the Docker socket so the container can run isolated sandboxes (if Docker is used inside the app)
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped
